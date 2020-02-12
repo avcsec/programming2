@@ -1,0 +1,11 @@
+/home/avc/tmp/programowanie2/etap1/bin/Debug/netcoreapp3.1/etap1
+/home/avc/tmp/programowanie2/etap1/bin/Debug/netcoreapp3.1/etap1.deps.json
+/home/avc/tmp/programowanie2/etap1/bin/Debug/netcoreapp3.1/etap1.runtimeconfig.json
+/home/avc/tmp/programowanie2/etap1/bin/Debug/netcoreapp3.1/etap1.runtimeconfig.dev.json
+/home/avc/tmp/programowanie2/etap1/bin/Debug/netcoreapp3.1/etap1.dll
+/home/avc/tmp/programowanie2/etap1/bin/Debug/netcoreapp3.1/etap1.pdb
+/home/avc/tmp/programowanie2/etap1/obj/Debug/netcoreapp3.1/etap1.csprojAssemblyReference.cache
+/home/avc/tmp/programowanie2/etap1/obj/Debug/netcoreapp3.1/etap1.AssemblyInfoInputs.cache
+/home/avc/tmp/programowanie2/etap1/obj/Debug/netcoreapp3.1/etap1.AssemblyInfo.cs
+/home/avc/tmp/programowanie2/etap1/obj/Debug/netcoreapp3.1/etap1.dll
+/home/avc/tmp/programowanie2/etap1/obj/Debug/netcoreapp3.1/etap1.pdb

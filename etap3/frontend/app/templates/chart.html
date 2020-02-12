@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2 class="subtitle is-4 has-text-centered">f(x) = {{ formula }}</h2>
+<div class="ct-chart ct-golden-section" id="chart1"></div>
+<br><br><br><br>
+<p class="has-text-centered">
+    <a class="button is-primary" href="/">Powrót</a>
+</p>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    new Chartist.Line('#chart1', {
+        labels: {{ x }},
+        series: [{{ y }}]
+    });
+</script>
+{% endblock %}

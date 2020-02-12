@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="field">
+    <form action="/go" method="post">
+        <p class="control">
+            <input class="input has-text-centered" id="formula" name="formula" type="text" placeholder="sin(x^2)+exp(x-2)+sqrt(3/x)" required>
+        </p>
+        <br>
+        <div class="field">
+            <p class="control has-text-centered">
+                <label class="radio">
+                    <input type="radio" id="chart_radio" name="type" value="chart" onchange="radioChanged()" checked> Generuj wykres
+                </label>
+                <label class="radio">
+                    <input type="radio" id="calculate_radio" name="type" value="calculate" onchange="radioChanged()"> Oblicz wartość
+                </label>
+            </p>
+        </div>
+        <h6 class="title is-6">Parametry</h6>
+        <div class="field is-horizontal">
+            <div class="field-body" id="x_div" style="display: none;">
+                <div class="field is-grouped">
+                    <p class="control is-expanded ">
+                        <input class="input has-text-centered" id="x" name="x" type="text" placeholder="X">
+                    </p>
+                </div>
+            </div>
+
+            <div class="field-body" id="from_div">
+                <div class="field is-grouped">
+                    <p class="control is-expanded ">
+                        <input class="input has-text-centered" id="from" name="from" type="text" placeholder="FROM" required>
+                    </p>
+                </div>
+            </div>
+
+            <div class="field-body" id="to_div">
+                <div class="field is-grouped">
+                    <p class="control is-expanded ">
+                        <input class="input has-text-centered" id="to" name="to" type="text" placeholder="TO" required>
+                    </p>
+                </div>
+            </div>
+
+            <div class="field-body" id="n_div">
+                <div class="field is-grouped">
+                    <p class="control is-expanded ">
+                        <input class="input has-text-centered" id="n" name="n" type="text" placeholder="N" required>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="is-grouped">
+            <p class="control has-text-centered">
+                <button class="button is-link" id="go_button">Generuj wykres</button>
+            </p>
+        </div>
+    </form>
+</div>
+<hr />
+<h3 class="subtitle">Poprzednie obliczenia</h3>
+<table class="table is-striped is-fullwidth" id="recent_calculations">
+    <thead>
+        <tr>
+            <th> Równanie </th>
+            <th> Argumenty </th>
+            <th> Akcje </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if res['status'] == 'ok' %}
+            {% for h in res['histories'] %}
+                <tr>
+                    <td>{{ h['formula'] }}</td>
+                    <td>
+                        {% if h['x'] %} x = {{ h['x'] }}<br>{% endif %}
+                        {% if h['from'] %} from = {{ h['from'] }}<br>{% endif %}
+                        {% if h['to'] %} to = {{ h['to'] }}<br>{% endif %}
+                        {% if h['n'] %} n = {{ h['n'] }}<br>{% endif %}
+                    </td>
+                    <td>
+                        <button class="button is-primary" onclick="setParams('{{ h['formula'] }}', '{{ h['x'] }}', '{{ h['from'] }}', '{{ h['to'] }}', '{{ h['n'] }}')">Wykonaj ponownie</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/chartist.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+        <title>Wolfgang|Beta</title>
+    </head>
+    <body>
+        <section class="hero is-primary">
+            <div class="hero-head">
+                <nav class="main-nav navbar ">
+                    <div class="container">
+                        <div class="navbar-start">
+                            <a class="navbar-item" href="/">
+                                <h1 class="title is-5">Wolfgang|Beta</h1>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Wolfgang|Beta</h1><br>
+                {% block content %}{% endblock %}
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <p>
+                        <strong>&copy; Wolfgang|Beta 2020</strong><br>
+                        CSS Template <strong>Bulmaswatch</strong> by
+                        <a href="http://jgog.in" target="_blank">Jenil Gogari</a>. Based on
+                        <a href="http://bulma.io" target="_blank">Bulma</a>.
+                        <br> The source code is licensed
+                        <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/chartist.min.js') }}"></script>
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

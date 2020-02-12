@@ -1,0 +1,14 @@
+/home/avc/tmp/programowanie2/etap3/webapi/bin/Release/netcoreapp2.2/etap2.deps.json
+/home/avc/tmp/programowanie2/etap3/webapi/bin/Release/netcoreapp2.2/etap2.runtimeconfig.json
+/home/avc/tmp/programowanie2/etap3/webapi/bin/Release/netcoreapp2.2/etap2.runtimeconfig.dev.json
+/home/avc/tmp/programowanie2/etap3/webapi/bin/Release/netcoreapp2.2/etap2.dll
+/home/avc/tmp/programowanie2/etap3/webapi/bin/Release/netcoreapp2.2/etap2.pdb
+/home/avc/tmp/programowanie2/etap3/webapi/obj/Release/netcoreapp2.2/etap2.csprojAssemblyReference.cache
+/home/avc/tmp/programowanie2/etap3/webapi/obj/Release/netcoreapp2.2/etap2.csproj.CoreCompileInputs.cache
+/home/avc/tmp/programowanie2/etap3/webapi/obj/Release/netcoreapp2.2/etap2.RazorAssemblyInfo.cache
+/home/avc/tmp/programowanie2/etap3/webapi/obj/Release/netcoreapp2.2/etap2.RazorAssemblyInfo.cs
+/home/avc/tmp/programowanie2/etap3/webapi/obj/Release/netcoreapp2.2/etap2.AssemblyInfoInputs.cache
+/home/avc/tmp/programowanie2/etap3/webapi/obj/Release/netcoreapp2.2/etap2.AssemblyInfo.cs
+/home/avc/tmp/programowanie2/etap3/webapi/obj/Release/netcoreapp2.2/etap2.RazorTargetAssemblyInfo.cache
+/home/avc/tmp/programowanie2/etap3/webapi/obj/Release/netcoreapp2.2/etap2.dll
+/home/avc/tmp/programowanie2/etap3/webapi/obj/Release/netcoreapp2.2/etap2.pdb
