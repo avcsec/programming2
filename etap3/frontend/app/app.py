@@ -4,13 +4,16 @@ from flask import redirect
 from flask import render_template
 from flask import request
 import json
+import os
 import requests
 
 app = Flask(__name__)
 
+API_URL = os.environ["API_URL"]
+
 @app.route('/')
 def index():
-    r = requests.get('http://127.0.0.1:5000/api/history', verify=False)
+    r = requests.get(API_URL + '/api/history', verify=False)
     res = json.loads(r.text)
     return render_template("index.html", res=res)
 
@@ -31,7 +34,7 @@ def go():
 
 def chart(formula, from_x, to_x, n):
     formula_enc = formula.replace("+", "%2B")
-    r = requests.get("http://localhost:5000/api/calculate/xy?formula=" + formula_enc + "&from=" + from_x + "&to=" + to_x + "&n=" + n, verify=False)
+    r = requests.get(API_URL + "/api/calculate/xy?formula=" + formula_enc + "&from=" + from_x + "&to=" + to_x + "&n=" + n, verify=False)
     try:
         res = json.loads(r.text)
         x = []
@@ -47,7 +50,7 @@ def chart(formula, from_x, to_x, n):
 
 def result(formula, x):
     formula_enc = formula.replace("+", "%2B")
-    r = requests.get('http://127.0.0.1:5000/api/calculate?x=' + x + "&formula=" + formula_enc, verify=False)
+    r = requests.get(API_URL + '/api/calculate?x=' + x + "&formula=" + formula_enc, verify=False)
     try:
         res = json.loads(r.text)
         r = res["result"]
